@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Poster | Together for Knowledge and Humanity</title>
+    <!-- Google Fonts & Font Awesome 6 (free) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e2e8f0 0%, #cfddee 100%);
+            font-family: 'Inter', 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* POSTER CARD - modern premium feel */
+        .poster {
+            max-width: 1000px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .poster-inner {
+            padding: 2rem 2rem 2rem 2rem;
+        }
+
+        /* ROW MOJA: LOGO (kushoto) + HEADING */
+        .header-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 3px solid #f5efe8;
+        }
+
+        /* LOGO HALISI KWA KUFUATA MAELEKEZO: "TOGETHER / Together we Learn, Together we Rise" */
+        .custom-logo {
+            flex-shrink: 0;
+            background: linear-gradient(145deg, #0f2b3d 0%, #1c4e6c 100%);
+            width: 130px;
+            padding: 0.9rem 0.5rem;
+            border-radius: 28px;
+            text-align: center;
+            box-shadow: 0 12px 18px -10px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo-together-main {
+            font-weight: 800;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: #FFE6C7;
+            line-height: 1.2;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-sub-line {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #F4D03F;
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+            border-top: 1px dashed rgba(255, 215, 150, 0.5);
+            padding-top: 5px;
+            display: inline-block;
+        }
+
+        /* HEADING upande wa kulia */
+        .main-heading {
+            flex: 1;
+        }
+
+        .main-heading h1 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            background: linear-gradient(125deg, #1E3C5C, #2B6A8F, #E76F51);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.3px;
+        }
+
+        .heading-tagline {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #66809a;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .divider-grace {
+            width: 45px;
+            height: 3px;
+            background: #F4A261;
+            border-radius: 4px;
+            margin: 0.4rem 0 0.2rem;
+        }
+
+        /* MESSAGES */
+        .message-card {
+            background: #FCF9F5;
+            padding: 1.6rem 2rem;
+            border-radius: 32px;
+            margin: 1.2rem 0 1rem 0;
+            border-left: 6px solid #F4A261;
+        }
+
+        .message-text {
+            font-size: 1.15rem;
+            line-height: 1.5;
+            color: #1F3A4B;
+            font-weight: 500;
+        }
+
+        .smile-highlight {
+            background: #FFEAD2;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-weight: 700;
+            color: #C4452C;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        /* BIBLE VERSE */
+        .bible-verse {
+            background: #EFF2FB;
+            border-radius: 28px;
+            padding: 1.5rem 1.8rem;
+            margin: 1rem 0 1.6rem 0;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .verse-text {
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #1A3E50;
+        }
+
+        .verse-ref {
+            font-weight: 800;
+            color: #E76F51;
+            margin-top: 0.6rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+            display: inline-block;
+            border-top: 1px solid #D8E2F0;
+            padding-top: 0.5rem;
+        }
+
+        /* DONATION SECTION */
+        .donation-panel {
+            background: linear-gradient(115deg, #FFFFFF 0%, #FFF7EF 100%);
+            border-radius: 28px;
+            padding: 1.5rem 1.8rem;
+            margin: 1.2rem 0 0.8rem;
+            border: 1px solid #FFE0C0;
+            box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .donation-icon-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #D45A2B;
+            letter-spacing: -0.2px;
+            margin-bottom: 1rem;
+        }
+
+        .donation-number-block {
+            background: #1E3C5C;
+            border-radius: 60px;
+            padding: 0.7rem 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .phone-number {
+            font-family: 'Poppins', monospace;
+            font-weight: 800;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: white;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+        }
+
+        .yas-label {
+            background: #F4A261;
+            padding: 0.35rem 1rem;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: #1F2D3A;
+        }
+
+        .account-details {
+            background: #F2E8DA;
+            padding: 0.8rem 1.2rem;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f2b3d;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .info-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 0.6rem;
+        }
+
+        /* Call to action */
+        .cta-area {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .btn-mchango {
+            background: #F4A261;
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #1E2F3E;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-mchango:hover {
+            background: #E76F51;
+            color: white;
+            transform: scale(0.98);
+        }
+
+        .footer-note {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 2rem;
+            color: #6f7e91;
+            border-top: 1px solid #edecec;
+            padding-top: 1.2rem;
+        }
+
+        @media (max-width: 700px) {
+            .poster-inner {
+                padding: 1.3rem;
+            }
+
+            .main-heading h1 {
+                font-size: 1.4rem;
+            }
+
+            .custom-logo {
+                width: 110px;
+                padding: 0.6rem 0.3rem;
+            }
+
+            .logo-together-main {
+                font-size: 1.3rem;
+            }
+
+            .logo-sub-line {
+                font-size: 0.6rem;
+            }
+
+            .phone-number {
+                font-size: 1.2rem;
+            }
+
+            .donation-number-block {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .message-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .btn-mchango {
+                display: none;
+            }
+
+            .poster {
+                box-shadow: none;
+            }
+        }
+
+        .soft-shadow {
+            transition: all 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poster">
+        <div class="poster-inner">
+            <!-- ROW MOJA: LOGO (kushoto) + HEADING "TOGETHER FOR KNOWLEDGE AND HUMANITY" -->
+            <div class="header-row">
+                <!-- Logo halisi kulingana na maelekezo: "TOGETHER / Together we Learn, Together we Rise" -->
+                <div class="custom-logo">
+                    <div class="logo-together-main">CHARITY</div>
+                    <div class="logo-sub-line">Together we Learn,<br> Together we Rise</div>
+                </div>
+                <div class="main-heading">
+                    <h1>TOGETHER FOR KNOWLEDGE AND HUMANITY</h1>
+                    <div class="divider-grace"></div>
+                    <div class="heading-tagline">
+                        <i class="fas fa-hand-holding-heart" style="font-size: 0.7rem; color:#F4A261;"></i>
+                        <span>Umoja wetu, nguvu zetu</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ujumbe mkuu: Usipime thamani ya msaada wako... -->
+            <div class="message-card">
+                <div class="message-text">
+                    “Usipime thamani ya msaada wako kwa ukubwa wake, maana hata kidogo kinaweza kubadilisha maisha ya
+                    mtu mwingine.”
+                </div>
+                <div class="smile-highlight">
+                    <i class="fas fa-smile-wink"></i> Tuwape tabasamu watu wenye uhitaji katika jamii yetu.
+                </div>
+            </div>
+
+            <!-- Aya ya Biblia 2 Wakorintho 9:7 -->
+            <div class="bible-verse">
+                <div class="verse-text">
+                    “Kila mmoja na atende kama alivyokusudia moyoni mwake, si kwa huzuni wala kwa lazima; maana Mungu
+                    humpenda yeye atoaye kwa moyo wa ukunjufu.”
+                </div>
+                <div class="verse-ref">
+                    — 2 Wakorintho 9:7
+                </div>
+            </div>
+
+            <!-- SEHEMU YA MICHANGO: namba na jina kwa usahihi -->
+            <div class="donation-panel">
+                <div class="donation-icon-title">
+                    <i class="fas fa-donate fa-fw"></i>
+                    <span>NJIA YA KUSADIA</span>
+                </div>
+                <div class="donation-number-block">
+                    <div class="phone-number">0702891878</div>
+                    <div class="yas-label">(YAS)</div>
+                </div>
+                <div class="info-flex">
+                    <div class="account-details">
+                        <i class="fas fa-user-check"></i> JINA: RICHMAN BOZEN JOHN
+                    </div>
+                    <div style="font-size:0.75rem; background:#E9E1D4; padding:0.3rem 0.8rem; border-radius:30px;">
+                        <i class="fas fa-mobile-alt"></i> Mchango wowote unahesabiwa
+                    </div>
+                </div>
+                <div
+                    style="margin-top: 0.8rem; font-size:0.75rem; color:#A57146; border-left: 2px solid #F4A261; padding-left: 0.6rem;">
+                    💙 Kwa moyo wa ukunjufu, badilisha maisha leo.
+                </div>
+            </div>
+
+            <!-- Call to action ya kisasa -->
+            <div class="cta-area">
+                <button class="btn-mchango"
+                    onclick="alert('Asante kwa nia yako njema! Wasiliana namba 0702891878 (YAS) kwa namna ya kuchanga. Mungu akubariki.')">
+                    <i class="fas fa-hands-helping"></i> SADIA SASA
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="footer-note">
+                <i class="far fa-heart"></i> Kila mchango, hata mdogo, unaleta tabasamu na matumaini. <i
+                    class="far fa-heart"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
